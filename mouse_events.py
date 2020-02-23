@@ -6,7 +6,7 @@ def click_event(event, x, y, flags, param):
         print(x, ", ", y)
         font = cv2.FONT_HERSHEY_SIMPLEX
         text = str(x) + ", " + str(y);
-        frame = cv2.putText(img, text, (x, y), font, .5, (255, 255, 0), 2, cv2.LINE_AA)
+        cv2.putText(img, text, (x, y), font, .5, (255, 255, 0), 2, cv2.LINE_AA)
         cv2.imshow("image", img)
     if event == cv2.EVENT_RBUTTONDOWN:
         blue = img[y, x, 0]
@@ -14,7 +14,7 @@ def click_event(event, x, y, flags, param):
         red = img[y, x, 2]
         font = cv2.FONT_HERSHEY_SIMPLEX
         text = str(blue) + ", " + str(green) + ", " + str(red)
-        frame = cv2.putText(img, text, (x, y), font, .5, (0, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(img, text, (x, y), font, .5, (0, 255, 255), 2, cv2.LINE_AA)
         cv2.imshow("image", img)
 
 #img = np.zeros((512, 512, 3), np.uint8)
