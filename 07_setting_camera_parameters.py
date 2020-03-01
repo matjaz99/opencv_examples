@@ -15,6 +15,7 @@ while cap.isOpened():
     if ret == True:
 
         font = cv2.FONT_HERSHEY_SIMPLEX
+        # try displaying static text like width or height or date and time (with running milliseconds)
         #text = "W: " + str(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) + " H: " + str(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) \
         text = str(datetime.datetime.now());
         frame = cv2.putText(frame, text, (10, 50), font, 1, (0, 255, 255), 2, cv2.LINE_AA)

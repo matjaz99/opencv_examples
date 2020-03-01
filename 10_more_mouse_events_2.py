@@ -1,5 +1,7 @@
-import  numpy as np
+import numpy as np
 import cv2
+
+# open new window with the selected color
 
 def click_event(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
